@@ -109,6 +109,25 @@ Copyright (c) 2014, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
                         </configuration>
                     </execution>
                     <execution>
+                        <id>prepare-embedded-version</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <copy todir="${project.basedir}/target/WSO2StudioBinary">
+                                    <fileset dir="${project.basedir}/resources/launcher-assembly" includes="**/*" />
+                                </copy>
+                                <copy todir="${project.basedir}/target/WSO2StudioBinary/webapps">
+                                    <fileset dir="${basedir}/target/${project.artifactId}-${project.version}/webapps/">
+                                        <include name="*.war"/>
+                                    </fileset>
+                                </copy>
+                            </tasks>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>delete-copied-extensions</id>
                         <phase>prepare-package</phase>
                         <goals>
@@ -266,6 +285,21 @@ Copyright (c) 2014, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
                                 <descriptor>${basedir}/resources/assembly/distribution-archive.xml</descriptor>
                             </descriptors>
                             <finalName>${project.artifactId}-${project.version}</finalName>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>package-embedded-binary</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <updateOnly>false</updateOnly>
+                            <descriptors>
+                                <descriptor>${basedir}/resources/assembly/binary-archive.xml</descriptor>
+                            </descriptors>
+                            <finalName>WSO2StudioBinary</finalName>
                         </configuration>
                     </execution>
                 </executions>
