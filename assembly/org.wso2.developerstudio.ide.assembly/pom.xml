@@ -19,7 +19,7 @@ Copyright (c) 2014, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
     <parent>
         <artifactId>developerstudio-distribution-parent</artifactId>
         <groupId>org.wso2.developerstudio</groupId>
-        <version>4.0.0-release-demo-m1</version>
+        <version>4.0.1-release-demo-m1-SNAPSHOT</version>
     </parent>
     <artifactId>developerstudio-assembly-ide</artifactId>
     <packaging>pom</packaging>
