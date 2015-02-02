@@ -19,7 +19,7 @@ limitations under the License.
     <parent>
         <artifactId>developerstudio-launcher-parent</artifactId>
         <groupId>org.wso2.developerstudio</groupId>
-        <version>4.0.0-SNAPSHOT</version>
+        <version>4.0.0-release-demo</version>
     </parent>
     <artifactId>org.wso2.developerstudio.sever.launcher</artifactId>
     <packaging>jar</packaging>
@@ -68,7 +68,7 @@ limitations under the License.
         <dependency>
             <groupId>org.wso2.developerstudio</groupId>
             <artifactId>org.wso2.developerstudio.workspaceselector.launcher</artifactId>
-            <version>4.0.0-SNAPSHOT</version>
+            <version>4.0.0-release-demo</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
