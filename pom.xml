@@ -23,7 +23,7 @@ limitations under the License.
     </parent>
     <groupId>org.wso2.developerstudio</groupId>
     <artifactId>developerstudio-parent</artifactId>
-    <version>4.0.0-release-demo</version>
+    <version>4.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>WSO2 Developer Studio :: Parent POM</name>
     <modules>
@@ -35,7 +35,7 @@ limitations under the License.
     <scm>
         <connection>scm:git:https://github.com/kaviththiranga/cloud-dev-studio.git</connection>
         <developerConnection>scm:git:https://github.com/kaviththiranga/cloud-dev-studio.git</developerConnection>
-        <tag>4.0.0-release-demo</tag>
+        <tag>HEAD</tag>
         <url>https://github.com/kaviththiranga/cloud-dev-studio.git</url>
     </scm>
     <properties>
